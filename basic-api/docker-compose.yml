@@ -1,0 +1,10 @@
+services:
+  basic-api:
+    build: .
+    ports:
+      - "4001:4001"
+    volumes:
+      - .:/api
+      - /api/node_modules
+    command: ["nodemon", "app.js"]
+    restart: always
