@@ -1,0 +1,10 @@
+services:
+  gmail-api:
+    build: .
+    ports:
+      - "4002:4002"
+    volumes:
+      - .:/api
+      - /api/node_modules # Evita sobrescrever o node_modules
+    command: ["npm", "start"] # Executa o comando start que usa nodemon
+    restart: always
