@@ -1,0 +1,23 @@
+services:
+  crud-student-api:
+    build: .
+    ports:
+      - "4003:4003"
+    volumes:
+      - .:/api
+      - /api/node_modules
+    command: ["npm", "start"]
+    restart: always
+
+  pgsql:
+    image: postgres:latest
+    container_name: pgsql-student-api
+    ports:
+      - "5434:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}   
+      POSTGRES_DB: ${DB_DATABASE}    
+    volumes:
+      - ./.docker/pgsql/data:/var/lib/postgresql/data
