@@ -10,8 +10,6 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 `PORT` `EMAIL` `PASSWORD`
 `OAUTH_CLIENTID` `OAUTH_CLIENT_SECRET` `OAUTH_REFRESH_TOKEN` 
 
-
-
 ## Documentação da API
 
 1. #### Envia um e-mail de confirmação de teste usando o serviço SMTP ethereal.email.
@@ -39,7 +37,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
   "error": "Detalhes do erro"
 ```
 
-2. #### Enviar E-mail Personalizado
+2. #### Enviar E-mail Personalizado.
 
 - ###### Envia um e-mail real para o endereço fornecido, com uma mensagem e tabela de itens.
 
