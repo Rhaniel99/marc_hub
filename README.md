@@ -17,7 +17,7 @@ Cada projeto possui sua própria configuração de Docker, e quando necessário,
 - Permite o envio de mensagens de e-mail utilizando serviços configuráveis, como Gmail.
 
 3. ####  Crud API
-- Uma API CRUD simples utilizando PostgreSQL como banco de dados.
+- Uma API CRUD simples utilizando PostgreSQL como banco de dados e ECMA6.
 - Projetada para criar, ler, atualizar e deletar informações.
 
 
