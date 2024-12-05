@@ -1,12 +1,10 @@
 {
-  "name": "crud-student-api",
+  "name": "crud-api",
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
   "scripts": {
     "start": "nodemon --loader esm-module-alias/loader --no-warnings app.js",
-    "db:migrate": "sequelize-cli db:migrate",
-    "db:seed": "sequelize-cli db:seed:all",
     "dist": "cp -r src dist && node -r @babel/register dist/app.js"
   },
   "keywords": [],
@@ -19,10 +17,7 @@
     "express": "^4.19.2",
     "pg": "^8.13.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.37.5",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "@babel/register": "^7.16.0"
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
@@ -30,6 +25,8 @@
   },
   "aliases": {
     "@controllers": "./src/controllers",
-    "@routes": "./src/routes"
+    "@models": "./src/models",
+    "@routes": "./src/routes",
+    "@configs": "./src/configs"
   }
 }

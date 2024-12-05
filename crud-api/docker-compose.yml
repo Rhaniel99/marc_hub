@@ -1,8 +1,8 @@
 services:
-  crud-student-api:
+  crud-api:
     build: .
     ports:
-      - "4003:4003"
+      - "4005:4005"
     volumes:
       - .:/api
       - /api/node_modules
@@ -11,9 +11,9 @@ services:
 
   pgsql:
     image: postgres:latest
-    container_name: pgsql-student-api
+    container_name: pgsql-crud-api
     ports:
-      - "5434:5432"
+      - "5440:5432"
     restart: always
     environment:
       POSTGRES_USER: ${DB_USER}
